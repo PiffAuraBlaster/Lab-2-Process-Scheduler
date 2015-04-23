@@ -1,5 +1,5 @@
-all: fmain.c functions.c
-	gcc -o main fmain.c functions.c -I .
+all: psmain.c functions.c
+	gcc -o main psmain.c functions.c -I .
 
 run:
 	./main
