@@ -6,6 +6,8 @@ run:
 
 clean:
 	rm -f main
+	rm -f queue
+	rm -f scheduler
 	rm -f t
 
 test1: test_queue.c queue.c

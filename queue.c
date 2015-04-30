@@ -3,7 +3,7 @@
 #include "queue.h"
 
 // CreateQueue takes arguement for the max number of elements and makes a Queue according to that number and returns a pointer to the Queue. //
-	Queue * createQueue(int maxElements)
+	Queue * CreateQueue(int maxElements)
 	{
 		Queue * Q;
 		Q = (Queue *)malloc(sizeof(Queue));
@@ -66,7 +66,28 @@
 		return;
 	}
 	
+	//Prints the elements in Queue//
+	void Peek(Queue * Q)
+	{   if(Q->size > 0)
+		{
+			printf("Items in queue are %i\n", Q->elements);
+			return;
+		}
+		
+	}
 	
-	int main()
+	
+	int qmain(void)
 	{
+        Queue *Q = CreateQueue(5);
+          Enqueue(Q,1);
+          Enqueue(Q,2);
+          Enqueue(Q,3);
+          Enqueue(Q,4);
+          printf("Front element is %d\n",front(Q));
+          Enqueue(Q,5);
+          Dequeue(Q);
+          Enqueue(Q,6);
+          printf("Front element is %d\n",front(Q));
+		  Peek(Q);
 	}
