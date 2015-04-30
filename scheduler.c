@@ -1,7 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "queue.h"
+#include "scheduler.h"
 
 
-
-
+int main()
+{
+}
 
 int stop() // stop the current running process if it exists, return its previous process if it exists.
 id

@@ -1,5 +1,5 @@
-all: psmain.c functions.c
-	gcc -o main psmain.c functions.c -I .
+all: scheduler.c queue.c
+	gcc -o main scheduler.c queue.c -I .
 
 run:
 	./main
@@ -8,7 +8,12 @@ clean:
 	rm -f main
 	rm -f t
 
-test: test_queue.c functions.c
-	gcc -o t test.c functions.c -I .
+test1: test_queue.c queue.c
+	gcc -o t test_queue.c queue.c -I .
+	./t
+	rm -f t
+	
+test2: test_scheduler.c scheduler.c
+	gcc -o t test_scheduler.c scheduler.c -I .
 	./t
 	rm -f t

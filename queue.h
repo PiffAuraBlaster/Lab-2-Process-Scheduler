@@ -9,3 +9,7 @@ typedef struct Queue{
 	int rear;
 	int *elements;
 }Queue;
+Queue * createQueue(int maxElements);
+void Dequeue(Queue * Q);
+int front(Queue *Q);
+void Enqueue(Queue *Q,int element);
